@@ -6,6 +6,7 @@ import './App.css'
 import SideBar from './components/SideBar';
 import Overview from './pages/Overview';
 import Orders from './pages/Orders';
+import TopBar from './components/TopBar';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     <div className='appContainer'>
       <SideBar />
       <div className='appContent'>
-        <div className='topBar'></div>
+        <TopBar />
         <div className='router'>
           <Routes >
             <Route path='/' element={<Overview />} />

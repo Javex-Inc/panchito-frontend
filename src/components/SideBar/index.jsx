@@ -8,10 +8,10 @@ function SideBar() {
 
     return (
         <div className='sideBar'>
-            <div className="mainIcon">
+            <div className='mainIcon'>
                 <img src="src/assets/react.svg"/>
             </div>
-            <div className="options">
+            <div className='options'>
                 <OptionCard title={'Geral'} path={'/'} active={active} iconName={'dashboard'} onClick={() => setActive('Geral')}/>
                 <OptionCard title={'Pedidos'} path={'/orders'} active={active} iconName={'order'} onClick={() => setActive('Pedidos')}/>
             </div>
