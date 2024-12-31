@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import './style.css'
 
-function OptionCard({title, active, iconName, onClick}) {
+function OptionCard({title, path, active, iconName, onClick}) {
     return (
-        <Link to={`/${title}`} style={{textDecoration: 'none'}}>
+        <Link to={path} style={{textDecoration: 'none'}}>
             <div className="optionCard" style={active == title ? {backgroundColor: '#feeee3'} : {backgroundColor: ''}} onClick={onClick}>
                 <div className={active == title ? "line active" : "line"}></div>
                 <div className="optionImage">

@@ -12,8 +12,8 @@ function SideBar() {
                 <img src="src/assets/react.svg"/>
             </div>
             <div className="options">
-                <OptionCard title={'Geral'} active={active} iconName={'dashboard'} onClick={() => setActive('Geral')}/>
-                <OptionCard title={'Pedidos'} active={active} iconName={'order'} onClick={() => setActive('Pedidos')}/>
+                <OptionCard title={'Geral'} path={'/'} active={active} iconName={'dashboard'} onClick={() => setActive('Geral')}/>
+                <OptionCard title={'Pedidos'} path={'/orders'} active={active} iconName={'order'} onClick={() => setActive('Pedidos')}/>
             </div>
         </div>
     )
