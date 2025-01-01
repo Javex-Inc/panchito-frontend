@@ -9,7 +9,7 @@ function SideBar() {
     return (
         <div className='sideBar'>
             <div className='mainIcon'>
-                <img src="src/assets/react.svg"/>
+                <img src="src/assets/logo-panchito.png"/>
             </div>
             <div className='options'>
                 <OptionCard title={'Geral'} path={'/'} active={active} iconName={'dashboard'} onClick={() => setActive('Geral')}/>
