@@ -7,6 +7,7 @@ import SideBar from './components/SideBar';
 import Overview from './pages/Overview';
 import Orders from './pages/Orders';
 import TopBar from './components/TopBar';
+import Catalog from './pages/Catalog';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Routes >
             <Route path='/' element={<Overview />} />
             <Route path='/orders' element={<Orders />} />
+            <Route path='/catalog' element={<Catalog/>}/>
           </Routes>
         </div>
       </div>
