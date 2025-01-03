@@ -1,0 +1,42 @@
+.slider {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 21rem;
+    height: 2rem;
+    margin-top: 1rem;
+    padding-block: 3px;
+    background-color: #dbdbdb;
+    border-radius: 8px;
+}
+
+.sliderFocus {
+    position: absolute;
+    top: 3px;
+    width: 108px;
+    height: calc(2rem - 6px);
+    border-radius: 6px;
+    position: "absolute";
+    background-color: #ffffff;
+    transition: left .3s ease;
+    z-index: 0;
+}
+
+.slider a {
+    display: flex;
+    cursor: pointer;
+}
+
+.sliderOption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 108px;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.sliderOption.active {
+    background-color: #ffffff;
+    transition: all .5s;
+}
