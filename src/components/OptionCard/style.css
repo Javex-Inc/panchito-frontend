@@ -42,3 +42,9 @@
 .optionText span {
     transition: all 0.2s;
 }
+
+.optionText  {
+    display: flex;
+    align-items: end;
+    height: 50%;
+}
