@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './style.css'
 import Slider from '../../components/Slider';
 import axios from 'axios';
+import ItemCard from '../../components/ItemCard';
 
 function Catalog() {
     const [products, setProducts] = useState([]);
@@ -31,18 +32,15 @@ function Catalog() {
             options={options}
             />
 
-            <ul>
-                {
-                    products.filter(product => product.category.includes(options[selectedIndex])).map((product, key) => (
-                        <div key={key}>
-                            <p>{product.name}</p>
-                            <img src={product.image} style={{maxWidth: '300px'}}/>
-                        </div>
-                    ))
-                }
-            </ul>
-            
-
+            <div className='catalogContent'>
+                <ul>
+                    {
+                        products.filter(product => product.category.includes(options[selectedIndex])).map((product, key) => (
+                            <ItemCard key={key} name={product.name} image={product.image}/>
+                        ))
+                    }
+                </ul>
+            </div>
         </div>
     )
 }

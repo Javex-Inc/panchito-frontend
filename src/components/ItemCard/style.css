@@ -1,0 +1,33 @@
+.itemCard {
+    display: flex;
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.itemCard img {
+    min-width: 100%;
+    border-radius: 20px;
+}
+
+.gradient {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #000000, #00000070, #00000015, transparent, transparent);
+    border-radius: 20px;
+}
+
+.itemCard p {
+    z-index: 2;
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    bottom: 12px;
+    left: 18px;
+}
