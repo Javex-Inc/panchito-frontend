@@ -1,8 +1,8 @@
 import './style.css'
 
-function ItemCard({name, image}) {
+function ItemCard({name, image, onClick}) {
     return (
-        <div className='itemCard'>
+        <div className='itemCard' onClick={onClick}>
             <p>{name}</p>
             <div className='gradient'></div>
             <img src={image}/>

@@ -1,5 +1,6 @@
 .catalogContainer {
     padding: 45px 35px 0 35px;
+    width: 100%;
 }
 
 .catalogTitle {
@@ -9,8 +10,28 @@
 
 .catalogContent {
     margin-top: 30px;
+    display: flex;
+    max-width: 100%;
+    position: relative;
 }
 
 .catalogContainer ul {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.detailContainer {
+    z-index: 2;
+    background-color: #ffffff;
+    width: 45rem;
+    height: 45rem;
+    position: absolute;
+    border-radius: 25px;
+    transition-property: right, opacity;
+    transition-duration: .35s;
+    transition-timing-function: ease;
+}
+
+.detailContainer img {
+    width: 45rem;
 }
