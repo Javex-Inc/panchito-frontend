@@ -26,7 +26,9 @@ function Catalog() {
             setActive(false);
         }
 
-        setActiveProduct({})
+        setTimeout(() => {
+            setActiveProduct({})
+        }, 200);
 
         console.log(activeProduct.category)
     }, [selectedIndex])
@@ -46,22 +48,24 @@ function Catalog() {
             />
 
             <div className='catalogContent'>
-                <ul style={{
-                    width: `${active ? 60 : 100}%`
-                }}>
-                    {
-                        products.filter(product => product.category.includes(options[selectedIndex])).map((product, key) => (
-                            <ItemCard key={key} name={product.name} image={product.image} onClick={() => {
-                                if(activeProduct == product) {
-                                    setActive(!active);
-                                } else {
-                                    setActive(true)
-                                }
-                                setActiveProduct(product);
-                            }}/>
-                        ))
-                    }
-                </ul>
+                <div className='itemList' style={{
+                        width: `${active ? 60 : 100}%`
+                    }}>
+                    <ul>
+                        {
+                            products.filter(product => product.category.includes(options[selectedIndex])).map((product, key) => (
+                                <ItemCard key={key} name={product.name} image={product.image} onClick={() => {
+                                    if(activeProduct == product) {
+                                        setActive(!active);
+                                    } else {
+                                        setActive(true)
+                                    }
+                                    setActiveProduct(product);
+                                }}/>
+                            ))
+                        }
+                    </ul>
+                </div>
 
                 <DetailCard active={active} activeProduct={activeProduct}/>
             </div>
