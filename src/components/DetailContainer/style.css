@@ -1,0 +1,31 @@
+.detailContainer {
+    z-index: 2;
+    background-color: #ffffff;
+    width: 45rem;
+    height: 45rem;
+    padding: 30px;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 25px;
+    transition-property: right, opacity;
+    transition-duration: .35s;
+    transition-timing-function: ease;
+}
+
+.detailContainer .title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.detailContainer p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.detailContainer img {
+    width: 100%;
+    max-height: 30rem;
+    border-radius: 10px;
+    object-fit: cover;
+}

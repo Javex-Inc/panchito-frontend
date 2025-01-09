@@ -3,6 +3,7 @@ import './style.css'
 import Slider from '../../components/Slider';
 import axios from 'axios';
 import ItemCard from '../../components/ItemCard';
+import DetailContainer from '../../components/DetailContainer';
 
 function Catalog() {
     const [products, setProducts] = useState([]);
@@ -62,14 +63,7 @@ function Catalog() {
                     }
                 </ul>
 
-                <div className='detailContainer' style={{
-                        right: `${active ? 0 : -45}rem`,
-                        opacity: `${active ? 100 : 0}%`,
-                    }}>
-                    <p>{activeProduct.name}</p>
-                    <p>{activeProduct.description}</p>
-                    <img src={activeProduct.image} />
-                </div>
+                <DetailContainer active={active} activeProduct={activeProduct}/>
             </div>
         </div>
     )
