@@ -1,9 +1,9 @@
-import { act, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './style.css'
 import Slider from '../../components/Slider';
 import axios from 'axios';
 import ItemCard from '../../components/ItemCard';
-import DetailContainer from '../../components/DetailContainer';
+import DetailCard from '../../components/DetailCard';
 
 function Catalog() {
     const [products, setProducts] = useState([]);
@@ -63,7 +63,7 @@ function Catalog() {
                     }
                 </ul>
 
-                <DetailContainer active={active} activeProduct={activeProduct}/>
+                <DetailCard active={active} activeProduct={activeProduct}/>
             </div>
         </div>
     )

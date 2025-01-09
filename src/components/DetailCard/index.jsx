@@ -1,6 +1,6 @@
 import './style.css'
 
-function DetailContainer({active, activeProduct}) {
+function DetailCard({active, activeProduct}) {
     return (
         <div className='detailContainer' style={{
             right: `${active ? 0 : -45}rem`,
@@ -13,4 +13,4 @@ function DetailContainer({active, activeProduct}) {
     )
 }
 
-export default DetailContainer
+export default DetailCard
