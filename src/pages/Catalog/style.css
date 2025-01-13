@@ -1,7 +1,7 @@
 .catalogContainer {
     padding: 45px 35px 0 35px;
     width: 100%;
-    min-height: calc(100vh - 5rem);
+    height: 100%;
 }
 
 .catalogTitle {
@@ -11,10 +11,8 @@
 
 .catalogContent {
     margin-top: 30px;
-    min-height: calc(100vh - 18rem);
     display: flex;
     position: relative;
-    overflow: hidden;
 }
 
 .itemList {

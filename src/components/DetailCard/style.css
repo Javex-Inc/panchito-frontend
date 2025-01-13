@@ -6,15 +6,36 @@
     padding: 30px;
     overflow: hidden;
     position: absolute;
+    display: none;
     top: 0;
     right: 0;
     transform: translateX(100%);
-    transition: transform .3s ease;
+    animation: dismove .3s ease;
     border-radius: 25px;
 }
 
+@keyframes dismove {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
 .detailContainer.active {
+    animation: move .3s ease;
     transform: translateX(0);
+    display: block;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .detailContainer .title {
