@@ -13,7 +13,7 @@ function OrderCard({ order }) {
     return (
         <div className='order-card'>
             <div className='order-card-header'>
-                <div className='order-card-status'>
+                <div className='order-card-status' style={{width: order.status.length > 6 ? '7.5rem' : '5rem'}}>
                     {order.status}
                 </div>
                 <p>{formatHour(order.timestamp)}</p>
