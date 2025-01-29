@@ -1,6 +1,6 @@
 import './style.css'
 
-function OrderCard({order}) {
+function OrderCard({ order }) {
     function formatHour(hour) {
         const dateObj = new Date(hour);
 
@@ -11,13 +11,26 @@ function OrderCard({order}) {
     }
 
     return (
-        <div className='orderCard'>
-            <div className='orderStatus'>{order.status}</div>
-            <p>{formatHour(order.timestamp)}</p>
-            <p>{order.client.name}</p>
-            <p>Pedido: {order.number}</p>
-            <p>{`${order.products.length} ${order.products.length > 1 ? 'Itens' : 'Item'}`}</p>
-            <p>R$ {order.total}</p>
+        <div className='order-card'>
+            <div className='order-card-header'>
+                <div className='order-card-status'>
+                    {order.status}
+                </div>
+                <p>{formatHour(order.timestamp)}</p>
+            </div>
+            <div className='order-card-client-name'>
+                <p>{order.client.name}</p>
+            </div>
+            <div className='order-card-bottom'>
+                <div className='order-card-id'>
+                    <p>Pedido: {order.number}</p>
+                </div>
+                <div className='order-card-itens-value'>
+                    <p>{`${order.products.length} ${order.products.length > 1 ? 'Itens' : 'Item'}`}</p>
+                    <div className='separator'></div>
+                    <p>R$ {order.total}</p>
+                </div>
+            </div>
         </div>
     )
 }

@@ -1,3 +1,66 @@
-.orderCard {
-    background-color: red;
+.order-card {
+    display: flex;
+    background-color: white;
+    padding: 13px 17px;
+    width: 550px;
+    height: 125px;
+    border-radius: 20px;
+    position: relative;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.order-card-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-card-header p {
+    font-size: 17px;
+    font-weight: 500;
+    color: #909090;
+}
+
+.order-card-client-name {
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+.order-card-status {
+    border-radius: 22px;
+    text-align: center;
+    width: 5rem;
+    background-color: #2B92B1;
+    color: white;
+
+}
+
+.order-card-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-card-id {
+    font-size: 17px;
+}
+
+.order-card-itens-value {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-card-itens-value p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.separator {
+    width: 1px;
+    height: 50%;
+    background-color: #00000090;
 }
