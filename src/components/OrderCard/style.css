@@ -8,6 +8,8 @@
     position: relative;
     justify-content: space-around;
     flex-direction: column;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 .order-card-header {
@@ -30,6 +32,9 @@
 }
 
 .order-card-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 22px;
     text-align: center;
     width: 5rem;
