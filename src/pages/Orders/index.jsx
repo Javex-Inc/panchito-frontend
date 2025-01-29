@@ -20,11 +20,13 @@ function Orders() {
     return (
         <div className='ordersContainer'>
             <span className='ordersTitle'>Pedidos</span>
-            {
-                orders.map((order, index) => (
-                    <OrderCard order={order} key={index}/>
-                ))
-            }
+            <div className='ordersList'>
+                {
+                    orders.map((order, index) => (
+                        <OrderCard order={order} key={index} />
+                    ))
+                }
+            </div>
         </div>
     )
 }
