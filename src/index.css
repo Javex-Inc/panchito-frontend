@@ -1,5 +1,5 @@
 :root {
-  font-family: "Poppins", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 * {
@@ -8,6 +8,7 @@
   box-sizing: border-box;
   color: #0e0e0e;
   user-select: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {

@@ -41,11 +41,15 @@ function Catalog() {
         <div className='catalogContainer'>
             <span className='catalogTitle'>Catálogo</span>
 
-            <Slider 
-            selectedIndex={selectedIndex} 
-            setSelectedIndex={setSelectedIndex} 
-            options={options}
-            />
+            <div className='header-controller'>
+                <Slider 
+                selectedIndex={selectedIndex} 
+                setSelectedIndex={setSelectedIndex} 
+                options={options}
+                />
+
+                <button className='new-item-button'>Novo</button>
+            </div>
 
             <div className='catalogContent'>
                 <div className='itemList' style={{
