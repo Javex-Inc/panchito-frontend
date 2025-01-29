@@ -7,6 +7,7 @@
   margin: 0;
   box-sizing: border-box;
   color: #0e0e0e;
+  user-select: none;
 }
 
 body {

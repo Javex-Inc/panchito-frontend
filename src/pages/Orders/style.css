@@ -1,5 +1,5 @@
 .ordersContainer {
-    padding: 45px 0 0 35px;
+    padding: 45px 35px 0 35px;
     height: 100%;
 }
 
@@ -12,4 +12,5 @@
     margin-top: 2rem;
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
