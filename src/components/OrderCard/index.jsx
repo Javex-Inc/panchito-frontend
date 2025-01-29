@@ -10,10 +10,23 @@ function OrderCard({ order }) {
         return `${hours}:${minutes}`
     }
 
+    const statusColor = new Map([
+        ["Pendente", "#898989"],
+        ["Preparando", "#2B92B1"],
+        ["Pronto", "#7F4F24"],
+        ["A caminho", "#F77F00"],
+        ["Entregue", "#588157"],
+        ["Cancelado", "#9A031E"]
+    ])
+
+    function searchStatusColor(status) {
+        return statusColor.get(status) || "#000000";
+    }
+
     return (
         <div className='order-card'>
             <div className='order-card-header'>
-                <div className='order-card-status' style={{width: order.status.length > 6 ? '7.5rem' : '5rem'}}>
+                <div className='order-card-status' style={{width: order.status.length > 6 ? '7.5rem' : '5rem', background: searchStatusColor(order.status)}}>
                     {order.status}
                 </div>
                 <p>{formatHour(order.timestamp)}</p>
