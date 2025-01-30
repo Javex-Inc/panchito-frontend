@@ -4,6 +4,8 @@ import Slider from '../../components/Slider';
 import axios from 'axios';
 import ItemCard from '../../components/ItemCard';
 import DetailCard from '../../components/DetailCard';
+import WhiteCard from '../../components/WhiteCard';
+
 
 function Catalog() {
     const [products, setProducts] = useState([]);
@@ -11,6 +13,7 @@ function Catalog() {
     const options = ['Hamburguer', 'Frango', 'Batata', 'Bebida'];
     const [active, setActive] = useState(false);
     const [activeProduct, setActiveProduct] = useState({})
+    const [showCard, setShowCard] = useState(false);
 
     const fetchProducts = async () => {
         try {
@@ -37,6 +40,7 @@ function Catalog() {
         fetchProducts()
     }, []);
 
+
     return (
         <div className='catalogContainer'>
             <span className='catalogTitle'>Catálogo</span>
@@ -48,13 +52,19 @@ function Catalog() {
                 options={options}
                 />
 
-                <button className='new-item-button'>Novo</button>
+                <div className="flex flex-col items-center justify-center min-h-screen space-y-4">
+                    <button className='new-item-button' onClick={() => setShowCard(!showCard)}>
+                        {showCard ? "Esconder Card" : "Novo"}
+                    </button>
+                    
+                </div>
             </div>
 
             <div className='catalogContent'>
                 <div className='itemList' style={{
                         width: `${active ? 60 : 100}%`
                     }}>
+                    {showCard && <WhiteCard />}
                     <ul>
                         {
                             products.filter(product => product.category.includes(options[selectedIndex])).map((product, key) => (
