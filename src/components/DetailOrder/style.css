@@ -1,0 +1,9 @@
+.orderDetailContainer {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    background-color: blueviolet;
+    overflow: hidden;
+    position: absolute;
+    display: none;
+}
