@@ -1,6 +1,6 @@
 import './style.css'
 
-function OrderCard({ order }) {
+function OrderCard({ order, onClick }) {
     function formatHour(hour) {
         const dateObj = new Date(hour);
 
@@ -24,7 +24,7 @@ function OrderCard({ order }) {
     }
 
     return (
-        <div className='order-card'>
+        <div className='order-card' onClick={onClick}>
             <div className='order-card-header'>
                 <div className='order-card-status' style={{width: order.status.length > 6 ? '7.5rem' : '5rem', background: searchStatusColor(order.status)}}>
                     {order.status}
