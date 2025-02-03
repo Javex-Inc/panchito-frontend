@@ -11,12 +11,16 @@ function Catalog() {
     const options = ['Hamburguer', 'Frango', 'Batata', 'Bebida'];
     const [active, setActive] = useState(false);
     const [activeProduct, setActiveProduct] = useState({})
+    const [isLoading, setIsLoading] = useState(false);
 
     const fetchProducts = async () => {
+        setIsLoading(true);
         try {
             const response = await axios.get('http://localhost:8080/products');
             setProducts(response.data);
+            setIsLoading(false);
         } catch (error) {
+            setIsLoading(false);
             console.log("failed to request: ", error);
         }
     }
@@ -48,13 +52,11 @@ function Catalog() {
             />
 
             <div className='catalogContent'>
-                <div className='itemList' style={{
-                        width: `${active ? 60 : 100}%`
-                    }}>
+                <div className='itemList'>
                     <ul>
                         {
                             products.filter(product => product.category.includes(options[selectedIndex])).map((product, key) => (
-                                <ItemCard key={key} name={product.name} image={product.image} onClick={() => {
+                                isLoading ? <p>carregando...</p> : <ItemCard key={key} name={product.name} image={product.image} onClick={() => {
                                     if(activeProduct == product) {
                                         setActive(!active);
                                     } else {

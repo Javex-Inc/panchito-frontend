@@ -1,11 +1,10 @@
 .detailContainer {
-    z-index: 2;
     background-color: #ffffff;
-    width: 45rem;
+    width: 100%;
+    max-width: 45rem;
+    min-width: 45rem;
     height: 45rem;
     padding: 30px;
-    overflow: hidden;
-    position: absolute;
     display: none;
     top: 0;
     right: 0;
